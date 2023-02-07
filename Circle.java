@@ -12,13 +12,15 @@ public class Circle{
 
     public static final double PI=3.1416;
     
+    private double perimeter;
+    private char c;
     private int diameter;
     private int xPosition;
     private int yPosition;
     private String color;
     private boolean isVisible;
     
-
+    
     public Circle(){
         diameter = 30;
         xPosition = 20;
@@ -27,8 +29,30 @@ public class Circle{
         isVisible = false;
     }
 
-
+    public double perimeter()
+    {
+        perimeter = PI * diameter;
+        return perimeter;
+    }
        
+    
+    public void zoom(char c)
+    {
+        if(c == '+')
+        {
+            erase();
+            diameter = diameter * 2;
+            draw();
+        }
+        else if(c == '-')
+        {
+            erase();
+            diameter = diameter / 2;
+            draw();
+        }
+    }
+    
+    
     public void makeVisible(){
         isVisible = true;
         draw();
