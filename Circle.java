@@ -13,7 +13,6 @@ public class Circle{
     public static final double PI=3.1416;
     
     private double perimeter;
-    private char c;
     private int diameter;
     private int xPosition;
     private int yPosition;
@@ -23,12 +22,14 @@ public class Circle{
     
     public Circle(){
         diameter = 30;
-        xPosition = 20;
-        yPosition = 15;
+        perimeter = PI * diameter;
+        xPosition = 100;
+        yPosition = 130;
         color = "blue";
         isVisible = false;
     }
 
+    
     /**
      * Shows the perimeter of the circle
      */
@@ -49,13 +50,34 @@ public class Circle{
         {
             erase();
             diameter = diameter * 2;
+            perimeter();
             draw();
         }
         else if(c == '-')
         {
             erase();
             diameter = diameter / 2;
+            perimeter();
             draw();
+        }
+    }
+    
+    
+    /**
+     * Makes the circle jump the times that the user choose.
+     * @param times. Number of times that the circle its going to jump.
+     * Recieves an integer.
+     */
+    public void jump(int times)
+    {
+        if(times > 0)
+        {
+            int i;
+            for(i = 0; i < times; i++)
+            {
+                slowMoveVertical(-50);
+                slowMoveVertical(50);
+            }
         }
     }
     
