@@ -29,6 +29,9 @@ public class Circle{
         isVisible = false;
     }
 
+    /**
+     * Shows the perimeter of the circle
+     */
     public double perimeter()
     {
         perimeter = PI * diameter;
@@ -36,6 +39,10 @@ public class Circle{
     }
        
     
+    /**
+     * Changes the perimeter in a 50% keeping proportions
+     * @param c. More or less zoom on the circle. Valid symbols '+' or '-'
+     */
     public void zoom(char c)
     {
         if(c == '+')
