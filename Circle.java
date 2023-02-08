@@ -82,6 +82,21 @@ public class Circle{
     }
     
     
+    /**
+     * Makes the circle vibrate.
+     */
+    public void vibrate()
+    {
+        int i, times;
+        times = 30;
+        for(i = 0; i < times; i++)
+        {
+            slowMoveHorizontal(-2);
+            slowMoveHorizontal(2);
+        }
+    }
+    
+    
     public void makeVisible(){
         isVisible = true;
         draw();
