@@ -30,6 +30,10 @@ public class Triangle{
         isVisible = false;
     }
 
+    public void movePosition(int x, int y){
+        this.xPosition = x;
+        this.yPosition = y;
+    }
     /**
      * Make this triangle visible. If it was already visible, do nothing.
      */

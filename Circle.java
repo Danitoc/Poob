@@ -222,7 +222,13 @@ public class Circle{
         diameter = newDiameter;
         draw();
     }
-
+    
+    //metodo adicionado para funcionalidades de la clase molecula 
+    public void movePosition(int x, int y){
+        this.xPosition = x;
+        this.yPosition = y;
+    }
+    
     /**
      * Change the color. 
      * @param color the new color. Valid colors are "red", "yellow", "blue", "green",
