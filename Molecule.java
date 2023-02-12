@@ -5,14 +5,13 @@ import java.util.Random;
 
 
 /**
- * Write a description of class Molecule here.
+ * Molecule class has the purpose of creating a new molecule on a system.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Alfonso Felipe - Daniel Villamil
+ * @version 1 11/02/2023
  */
 public class Molecule
 {
-    // instance variables - replace the example below with your own
     private int x = 0;
     private int y = 0;
     private Rectangle rectangle = new Rectangle();
@@ -24,6 +23,11 @@ public class Molecule
     private boolean isVisible;
     
     // miniciclo 1 
+    /**
+     * Method that constructs the molecule with given conectors
+     * @param conectorss. List of the conector thar are going to be given 
+     * by the user.
+     */
     public Molecule(String[] conectorss)
     {
         // constructor mo tiene retorno 
@@ -36,6 +40,11 @@ public class Molecule
         createShapes();
     }
     
+    
+    /**
+     * Method that constructs the molecule with random generated conectors
+     * @param position. The location of the position of the random conector
+     */
     public String getConnector(int position){
         if (position == 12 ){
             return conectors.get(0);
@@ -53,6 +62,10 @@ public class Molecule
     }
     
     // miniciclo 2 
+    /**
+     * Method that has the list of the posible conectors that the molecule 
+     * its going to be using in the one that its generated randomly
+     */
     public Molecule (){
         List <String> conectorsList = Arrays.asList("A+","A-","B+","B-","C+",
         "C-","D+","D-","E+","E-","F+","F-","G+","G-","00","**");
@@ -66,6 +79,11 @@ public class Molecule
         createShapes();
     }
     
+    
+    /**
+     * Method that creates shapes testing the type of condition that
+     * the conectors need to have in order to be attached to another molecule.
+     */
     private void createShapes(){
         rectangle.changeSize(150, 150);
         rectangle.changeColor("black");
@@ -186,6 +204,10 @@ public class Molecule
 
     }
     
+    
+    /**
+     * Method that changes the conectors inside the molecule
+     */
     public void change (){
         List <String> conectorsList = Arrays.asList("A+","A-","B+","B-","C+",
         "C-","D+","D-","E+","E-","F+","F-","G+","G-");
@@ -201,6 +223,9 @@ public class Molecule
     }
     
     // miniciclo 3
+    /**
+     * Method that makes visible the molecule
+     */
     public void makeVisible(){
         isVisible = true;
         createShapes();
@@ -222,6 +247,10 @@ public class Molecule
         }
     }
     
+    
+    /**
+     * Method that makes invisible the molecule
+     */
     public void makeInvisible(){
         isVisible = false;
         rectangle.makeInvisible();
@@ -240,6 +269,9 @@ public class Molecule
     }
     
     // miniciclo 4 
+    /**
+     * Method that reflects the molecule
+     */
     public void reflect(){
         String temporalCon = conectors.get(1);
         conectors.set(1, conectors.get(3));
@@ -250,6 +282,10 @@ public class Molecule
         }
     }
     
+    
+    /**
+     * Method that rotates the molecule
+     */
     public void rotate(){
         String tempc1 = conectors.get(0);
         String tempc2 = conectors.get(1);
@@ -267,6 +303,14 @@ public class Molecule
         }        
     }
     
+    
+    /**
+     * Method that moves the molecule a given amount of pixels.
+     * @param x. The amount of pixels as an integer that the molecule
+     * its going to be moved to the right or left.
+     * @param y. The amount of pixels as an integer that the molecule
+     * its going to be moved up or down.
+     */
     public void moveTo(int x , int y){
         this.x = x;
         this.y = y;

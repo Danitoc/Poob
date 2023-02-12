@@ -97,17 +97,27 @@ public class Circle{
     }
     
     
+    /**
+     * Make the circle visible. If it was already visible, do nothing.
+     */
     public void makeVisible(){
         isVisible = true;
         draw();
     }
     
-
+    
+    /**
+     * Make the circle invisible. If it was already invisible, do nothing.
+     */
     public void makeInvisible(){
         erase();
         isVisible = false;
     }
-
+    
+    
+    /**
+     * Draws the circle.
+     */
     private void draw(){
         if(isVisible) {
             Canvas canvas = Canvas.getCanvas();
@@ -118,6 +128,10 @@ public class Circle{
         }
     }
 
+    
+    /**
+     * Erase the circle.
+     */
     private void erase(){
         if(isVisible) {
             Canvas canvas = Canvas.getCanvas();
@@ -223,8 +237,16 @@ public class Circle{
         draw();
     }
     
-    //metodo adicionado para funcionalidades de la clase molecula 
-    public void movePosition(int x, int y){
+    
+    /**
+     *Method that moves the circle a given number of pixels.
+     * @param x. The amount of pixels as an integer that the circle
+     * its going to be moved to the right or left.
+     * @param y. The amount of pixels as an integer that the cicle
+     * its going to be moved up or down.
+     */ 
+    public void movePosition(int x, int y)
+    {
         this.xPosition = x;
         this.yPosition = y;
     }

@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class SelfAssembly here.
+ * Mini app for the SelfAssembly Program
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Alfonso Felipe - Villamil Daniel
+ * @version 0.1
  */
 public class SelfAssembly
 {
@@ -15,7 +15,6 @@ public class SelfAssembly
      */
     public SelfAssembly()
     {
-        // initialise instance variables
         x = 0;
     }
 

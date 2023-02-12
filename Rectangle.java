@@ -4,7 +4,7 @@ import java.awt.*;
  * A rectangle that can be manipulated and that draws itself on a canvas.
  * 
  * @author  Michael Kolling and David J. Barnes (Modified)
- * @version 1.0  (15 July 2000)()
+ * @version 1.5  (11/02/2023)
  */
 
 
@@ -32,6 +32,14 @@ public class Rectangle{
         isVisible = false;
     }
     
+    
+    /**
+     * Method that moves the rectangle a given number of pixels.
+     * @param x. The amount of pixels as an integer that the rectangle
+     * its going to be moved to the right or left.
+     * @param y. The amount of pixels as an integer that the rectangle
+     * its going to be moved up or down.
+     */
     public void movePosition(int x, int y){
     this.xPosition = x;
     this.yPosition = y;

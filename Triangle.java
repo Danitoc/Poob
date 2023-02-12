@@ -30,10 +30,20 @@ public class Triangle{
         isVisible = false;
     }
 
+    
+    /**
+     * Method that moves the traingle a given number of pixels.
+     * @param x. The amount of pixels as an integer that the triangle
+     * its going to be moved to the right or left.
+     * @param y. The amount of pixels as an integer that the trianlge
+     * its going to be moved up or down.
+     */
     public void movePosition(int x, int y){
         this.xPosition = x;
         this.yPosition = y;
     }
+    
+    
     /**
      * Make this triangle visible. If it was already visible, do nothing.
      */
@@ -41,6 +51,7 @@ public class Triangle{
         isVisible = true;
         draw();
     }
+    
     
     /**
      * Make this triangle invisible. If it was already invisible, do nothing.
@@ -50,34 +61,39 @@ public class Triangle{
         isVisible = false;
     }
     
+    
     /**
      * Move the triangle a few pixels to the right.
      */
     public void moveRight(){
         moveHorizontal(20);
     }
-
+    
+    
     /**
      * Move the triangle a few pixels to the left.
      */
     public void moveLeft(){
         moveHorizontal(-20);
     }
-
+    
+    
     /**
      * Move the triangle a few pixels up.
      */
     public void moveUp(){
         moveVertical(-20);
     }
-
+    
+    
     /**
      * Move the triangle a few pixels down.
      */
     public void moveDown(){
         moveVertical(20);
     }
-
+    
+    
     /**
      * Move the triangle horizontally.
      * @param distance the desired distance in pixels
@@ -87,7 +103,8 @@ public class Triangle{
         xPosition += distance;
         draw();
     }
-
+    
+    
     /**
      * Move the triangle vertically.
      * @param distance the desired distance in pixels
@@ -97,7 +114,8 @@ public class Triangle{
         yPosition += distance;
         draw();
     }
-
+    
+    
     /**
      * Slowly move the triangle horizontally.
      * @param distance the desired distance in pixels
@@ -117,7 +135,8 @@ public class Triangle{
             draw();
         }
     }
-
+    
+    
     /**
      * Slowly move the triangle vertically.
      * @param distance the desired distance in pixels
@@ -137,7 +156,8 @@ public class Triangle{
             draw();
         }
     }
-
+    
+    
     /**
      * Change the size to the new size
      * @param newHeight the new height in pixels. newHeight must be >=0.
@@ -149,6 +169,7 @@ public class Triangle{
         width = newWidth;
         draw();
     }
+        
     
     /**
      * Change the color. 
@@ -159,7 +180,8 @@ public class Triangle{
         color = newColor;
         draw();
     }
-
+    
+    
     /*
      * Draw the triangle with current specifications on screen.
      */
@@ -172,7 +194,8 @@ public class Triangle{
             canvas.wait(10);
         }
     }
-
+    
+    
     /*
      * Erase the triangle on screen.
      */
